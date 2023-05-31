@@ -1,0 +1,13 @@
+h2{
+    color: red;
+}
+
+
+.scroll{
+    overflow-x: scroll;
+}
+
+.logo{
+    height: 45px;
+    width: 100px;
+}
