@@ -5,24 +5,31 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
 	const {store, actions} = useContext(Context);
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
+		<div className="container">
+		<nav className="navbar navbar-light  mb-3">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1">My Star Wars Blog</span>
+			<img
+                src={`https://1000marcas.net/wp-content/uploads/2019/12/Star-Wars-Logo-5.png`}
+                className="card-img-top"
+				width="70" height="70"
+                alt="..."
+            />
 			</Link>
 			<div className="ml-auto">
 				<div className="btn-group dropstart">
-					<button type="button" className="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+					<button type="button" className="btn btn-outline-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 						Favorites
 					</button>
 						
 					<ul className="dropdown-menu">
-						{ store.favorites.length >= 1 ? ( store.favorites.map(favItem => <li key={favItem._id}><span>{favItem.properties.name}</span><span onClick={()=>actions.addFavorite(favItem)}>x</span></li>)) : <div>No favorites yet!</div>}
+						{ store.favorites.length >= 1 ? ( store.favorites.map(favItem => <li key={favItem._id}><span>{favItem.properties.name}</span><span onClick={()=>actions.addFavorite(favItem)}></span></li>)) : <div></div>}
 						
 					</ul>	
 				</div>
 				
 			</div>
 		</nav>
+		</div>
 	);
 };
 
