@@ -13,24 +13,24 @@ export const Home = () => {
 
 
 	return(
-
-	<div>
-		<h2>Characters</h2>
-		<div className="scroll">
-			<Characters />
+		<div className="container">
+			<div>
+				<h1>Characters</h1>
+				<div className="scroll">
+					<Characters />
+				</div>
+				
+				<h1>Planets</h1>
+				<div className="scroll">
+					<Planets/>
+				</div>
+				
+				<h1>Vehicles</h1>
+				<div className="scroll">
+					<Vehicles/>
+				</div>
+			</div>
 		</div>
-
-		<h2>Planets</h2>
-		<div className="scroll">
-			<Planets/>
-		</div>
-		
-		<h2>Vehicles</h2>
-		<div className="scroll">
-			<Vehicles/>
-		</div>
-
-	</div>
 	)
 
 	};
