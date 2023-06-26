@@ -1,26 +1,38 @@
-import React from "react";
+import React, {useContext} from "react";
+import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
+
 import "../../styles/home.css";
 
-import { Card } from "../component/Card.jsx";
+import { Characters } from "../component/Characters.jsx";
+import { Planets } from "../component/Planets.jsx";
+import { Vehicles } from "../component/Vehicles.jsx";
 
-export const Home = () => (
-<div className="container">
-	<div className="row">
-	    <div className="col-10">
-		    <img className="logo" src="https://www.pngmart.com/files/3/Star-Wars-Logo-PNG-Photos.png" alt="StarWars"/>
-		</div>
-		<button type="button" class="btn btn-primary col-2">Favorites</button>
-	</div>
+export const Home = () => {
+	
+
+
+	return(
+
 	<div>
 		<h2>Characters</h2>
 		<div className="scroll">
-			<Card />
+			<Characters />
 		</div>
+
 		<h2>Planets</h2>
 		<div className="scroll">
-			<Card />
+			<Planets/>
+		</div>
+		
+		<h2>Vehicles</h2>
+		<div className="scroll">
+			<Vehicles/>
 		</div>
 
 	</div>
-</div>
-);
+	)
+
+	};
+
+
