@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
@@ -9,30 +9,30 @@ import { Planets } from "../component/Planets.jsx";
 import { Vehicles } from "../component/Vehicles.jsx";
 
 export const Home = () => {
-	
 
 
-	return(
+
+	return (
 		<div className="container">
 			<div>
 				<h1>Characters</h1>
 				<div className="scroll">
 					<Characters />
 				</div>
-				
-				<h1>Planets</h1>
+
+				<h1 className="margen">Planets</h1>
 				<div className="scroll">
-					<Planets/>
+					<Planets />
 				</div>
-				
-				<h1>Vehicles</h1>
+
+				<h1 className="margen">Vehicles</h1>
 				<div className="scroll">
-					<Vehicles/>
+					<Vehicles />
 				</div>
 			</div>
 		</div>
 	)
 
-	};
+};
 
 
